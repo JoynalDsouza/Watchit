@@ -38,7 +38,7 @@ const Row = ({ children, items }) => {
       </h1>
       <div className="relative">
       {scrollX !== 0 && (
-        <button className="absolute top-0 bottom-0 z-10 text-white hover:text-red-500" onClick={() => slide(-250)}>
+        <button className="absolute top-0 bottom-0 z-10 text-white hover:text-red-500" onClick={() => slide(-350)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-16 w-16"
@@ -63,7 +63,7 @@ const Row = ({ children, items }) => {
         </div>
       </div>
       {!scrolEnd && (
-        <button className="absolute right-0 top-0 bottom-0 z-10  text-white hover:text-red-500" onClick={() => slide(+250)}>
+        <button className="absolute right-0 top-0 bottom-0 z-10  text-white hover:text-red-500" onClick={() => slide(+350)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-16 w-16"

@@ -1,13 +1,6 @@
 import { moviesActionTypes } from "./movies.types";
 import {
-  fetchActionMovies,
-  fetchAdventureMovies,
-  fetchAnimationMovies,
-  fetchComedyMovies,
-  fetchHorrorMovies,
-  fetchMysteryMovies,
-  fetchRomanceMovies,
-  fetchScifiMovies,
+  fetchMoviesWithGenreId,
   fetchTopRatedMovies,
   fetchTrendingMovies,
   fetchUpcomingMovies,
@@ -32,7 +25,7 @@ export const fetchActionMoviesFailure = (error) => ({
 export const fetchActionMoviesAsync = () => {
   return (dispatch) => {
     dispatch(fetchActionMoviesRequest());
-    fetchActionMovies()
+    fetchMoviesWithGenreId(28)
       .then((res) => {
         const result = res.results;
         dispatch(fetchActionMoviesSuccess(result));
@@ -60,7 +53,7 @@ export const fetchAdventureMoviesFailure = (error) => ({
 export const fetchAdventureMoviesAsync = () => {
   return (dispatch) => {
     dispatch(fetchAdventureMoviesRequest());
-    fetchAdventureMovies()
+    fetchMoviesWithGenreId(12)
       .then((res) => {
         const result = res.results;
         dispatch(fetchAdventureMoviesSuccess(result));
@@ -87,7 +80,7 @@ export const fetchComedyMoviesFailure = (error) => ({
 export const fetchComedyMoviesAsync = () => {
   return (dispatch) => {
     dispatch(fetchComedyMoviesRequest());
-    fetchComedyMovies()
+    fetchMoviesWithGenreId(35)
       .then((res) => {
         const result = res.results;
         dispatch(fetchComedyMoviesSuccess(result));
@@ -114,7 +107,7 @@ export const fetchAnimationMoviesFailure = (error) => ({
 export const fetchAnimationMoviesAsync = () => {
   return (dispatch) => {
     dispatch(fetchAnimationMoviesRequest());
-    fetchAnimationMovies()
+    fetchMoviesWithGenreId(16)
       .then((res) => {
         const result = res.results;
         dispatch(fetchAnimationMoviesSuccess(result));
@@ -141,7 +134,7 @@ export const fetchHorrorMoviesFailure = (error) => ({
 export const fetchHorrorMoviesAsync = () => {
   return (dispatch) => {
     dispatch(fetchHorrorMoviesRequest());
-    fetchHorrorMovies()
+    fetchMoviesWithGenreId(27)
       .then((res) => {
         const result = res.results;
         dispatch(fetchHorrorMoviesSuccess(result));
@@ -149,7 +142,6 @@ export const fetchHorrorMoviesAsync = () => {
       .catch((error) => dispatch(fetchHorrorMoviesFailure(error.message)));
   };
 };
-
 
 //Romance
 export const fetchRomanceMoviesRequest = () => ({
@@ -169,7 +161,7 @@ export const fetchRomanceMoviesFailure = (error) => ({
 export const fetchRomanceMoviesAsync = () => {
   return (dispatch) => {
     dispatch(fetchRomanceMoviesRequest());
-    fetchRomanceMovies()
+    fetchMoviesWithGenreId(10749)
       .then((res) => {
         const result = res.results;
         dispatch(fetchRomanceMoviesSuccess(result));
@@ -196,7 +188,7 @@ export const fetchScifiMoviesFailure = (error) => ({
 export const fetchScifiMoviesAsync = () => {
   return (dispatch) => {
     dispatch(fetchScifiMoviesRequest());
-    fetchScifiMovies()
+    fetchMoviesWithGenreId(878)
       .then((res) => {
         const result = res.results;
         dispatch(fetchScifiMoviesSuccess(result));
@@ -223,7 +215,7 @@ export const fetchMysteryMoviesFailure = (error) => ({
 export const fetchMysteryMoviesAsync = () => {
   return (dispatch) => {
     dispatch(fetchMysteryMoviesRequest());
-    fetchMysteryMovies()
+    fetchMoviesWithGenreId(9648)
       .then((res) => {
         const result = res.results;
         dispatch(fetchMysteryMoviesSuccess(result));
