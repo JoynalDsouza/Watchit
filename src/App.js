@@ -1,7 +1,6 @@
-import "./App.css";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,Navigate } from "react-router-dom";
 import MoviesPage from "./pages/MoviesPage";
 import DetailsPage from "./pages/DetailsPage";
 
@@ -13,6 +12,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
+        <Route path="*" element={<Navigate replace to="/" /> } />
       </Routes>
     </>
   );
