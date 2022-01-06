@@ -1,14 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import {
-  selectTrendingMoviesData,
-  selectPopularMoviesData,
-  selectTopRatedMoviesData,
-  selectUpcomingMoviesData,
-} from "../../redux/movies/movies.selectors";
-import Row from "../RowComponent/Row";
 
+
+import Row from "../RowComponent/Row";
 
 const Home = ({
   trendingMovies,
@@ -28,12 +22,13 @@ const Home = ({
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  trendingMovies: selectTrendingMoviesData,
-
-  popularMovies: selectPopularMoviesData,
-  topRatedMovies: selectTopRatedMoviesData,
-  upComingMovies: selectUpcomingMoviesData,
+const mapStateToProps = state => ({
+   trendingMovies : state.movies.trendingMovies.data,
+  popularMovies :  state.movies.trendingMovies.data,
+  topRatedMovies :state.movies.trendingMovies.data,
+  upComingMovies  :state.movies.trendingMovies.data,
 });
+
+
 
 export default connect(mapStateToProps)(Home);
