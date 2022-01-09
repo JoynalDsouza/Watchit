@@ -1,12 +1,15 @@
-# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a movie recommendation application built using React and Redux. The data is recieved from tmdb API.
+
 
 # You Can View The Deployed Version
 
-https://assignment-2-delta.vercel.app/
+https://watchit-navy.vercel.app/
 
-### `Clone this repository to your local machine`
+## Clone this repository to your local machine
+
+### `git clone git@github.com:JoynalDsouza/Watchit.git`
+
 
 ## Available Scripts
 
